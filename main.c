@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "SplashScreen.h"
+#include "splash.h"
 //#include "login.h"
 //#include "menu.h"
 
@@ -11,7 +11,7 @@ int main(void)
 
     
 
-    //sscreen();
+    sscreen();
 
     //login();
 
