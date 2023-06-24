@@ -3,6 +3,7 @@ extern int file_num;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <dos.h>
 #define MAX_ACCOUNTS 10
 #define INPUT 10
 
@@ -21,6 +22,7 @@ void login() {
 
     struct users accounts[MAX_ACCOUNTS];
 
+    //open txt file to put data into struct variables with while condition
     FILE* file = fopen("accountCredentials.txt", "r");
     if (file == NULL) {
         printf("Error opening file.\n");
@@ -41,9 +43,12 @@ void login() {
         printf("\t\t\t\t\tEnter Password> ");
         scanf("%s", password);
 
+        //match username and password to give access
         for (i = 0; i < count; i++) {
             if (strcmp(username, accounts[i].username) == 0 && strcmp(password, accounts[i].password) == 0) {
                 flag = 1;
+
+                //file_num for unique database file according to login account
                 file_num = i + 1;
                 break;
             }
