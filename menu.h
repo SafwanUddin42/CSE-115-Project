@@ -36,7 +36,8 @@ void main_menu() {
         printf("\t\t\t\t\t| 2) Update Level               |\n");
         printf("\t\t\t\t\t| 3) Experience Calculator      |\n");
         printf("\t\t\t\t\t| 4) Check current characters   |\n");
-        printf("\t\t\t\t\t| 5) Exit                       |\n");
+        printf("\t\t\t\t\t| 5) Check Server maintainance  |\n");
+        printf("\t\t\t\t\t| 6) Exit                       |\n");
         printf("\t\t\t\t\t|_______________________________|\n\n");
 
 
@@ -61,11 +62,14 @@ void main_menu() {
                 ListCharacters();
                 break;
             case 5:
+                system("cls");
+                ShellExecute(NULL, "open", "a.jpg", NULL, NULL, SW_SHOWNORMAL);
+            case 6:
                 printf("\t\t\t\t\t _______________________________\n");
                 printf("\t\t\t\t\t|                               |\n");
                 printf("\t\t\t\t\t| Exiting...                    |\n");
                 printf("\t\t\t\t\t|_______________________________|\n\n");
-                exit(0);
+                return 0;
             default:
                 printf("\t\t\t\t      _____________________________________\n");
                 printf("\t\t\t\t     |                                     |\n");
@@ -429,3 +433,4 @@ void ListCharacters() {
     system("pause");
     system("cls");
 }
+
