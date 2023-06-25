@@ -118,7 +118,22 @@ void AddCharacter() {
     }
    //store character information into txt file
    if((character >0 && character <6) && (character >0 && level <101)){
-    fprintf(file, "%s %d\n", (character == 1) ? "Altria" : (character == 2) ? "Arcueid" : (character == 3) ? "Scathach" : (character == 4) ? "Skadi" : "Morgan", level);
+    if(character == 1){
+        fprintf(file, "Altria %d\n", level);
+    }
+     else if(character == 2){
+        fprintf(file, "Arcueid %d\n", level);
+     }
+     else if(character == 3){
+        fprintf(file, "Scathach %d\n", level);
+     }
+     else if(character == 4){
+        fprintf(file, "Skadi %d\n", level);
+     }
+     else if(character == 5){
+        fprintf(file, "Morgan %d\n", level);
+     }
+
     fclose(file);
 
     printf("\t\t\t\t\t _______________________________\n");
